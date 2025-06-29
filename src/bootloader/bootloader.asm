@@ -105,7 +105,7 @@ failDiskRead:
     JMP halt
 diskReset:
     pusha
-    MOV ah, 0 ;reset read s
+    MOV ah, 0 ;reset read
     STC
     INT 13h
     JC failDiskRead

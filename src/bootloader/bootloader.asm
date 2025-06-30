@@ -75,8 +75,8 @@ rootDirAfter:
 
 
 searchKernel:
-    MOV si, [file_kernel_bin] ; takes the file name
-    MOV cl,11                 ;set size (11) 11= sile name size
+    MOV si, file_kernel_bin ; takes the file name
+    MOV cx,11                 ;set size (11) 11= sile name size
     PUSH di                   ;preserve di value in STACK
     REPE CMPSB                ;compare it
     POP di                    ;pop off the value di after comp
@@ -90,7 +90,7 @@ searchKernel:
     JMP kernelNotFound          ; or else jmp to ***
 
 kernelNotFound:
-    MOV si,[msg_kernel_not_found]  ; moving msg to source index
+    MOV si, msg_kernel_not_found  ; moving msg to source index
     CALL print                      ; printing the msg
     HLT
     JMP halt                        ;loop
@@ -254,10 +254,10 @@ done_print:
     RET
 
 
-os_boot_msg: DB "OUR OS has booted from bootloader not from kernal",0x0D,0x0A,0
+os_boot_msg: DB "Loading...",0x0D,0x0A,0
 read_failure DB "Failed to read DISK",0x0D,0x0A,0
 file_kernel_bin DB "KERNEL  BIN"
-msg_kernel_not_found DB "KERNEL.BIN not found",0
+msg_kernel_not_found DB "KERNEL.BIN not found"
 
 kernel_cluster DW 0
 
@@ -267,4 +267,4 @@ kernel_load_offset EQU 0
 TIMES 510-($-$$) DB 0
 DW 0AA55h
 
-buffer:
+buffer: TIMES 512 DB 0

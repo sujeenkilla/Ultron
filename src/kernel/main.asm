@@ -1,4 +1,4 @@
-ORG 0x0
+ORG 0x0 ;kernal should be different
 BITS 16
 
 main:

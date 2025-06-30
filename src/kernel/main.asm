@@ -36,6 +36,6 @@ done_print:
     RET
 
 
-os_boot_msg: DB "OUR MSG has booted",0x0D,0x0A,0
+os_boot_msg: DB "OUR MSG has booted from kernal",0x0D,0x0A,0
 TIMES 510-($-$$) DB 0
 DW 0AA55h

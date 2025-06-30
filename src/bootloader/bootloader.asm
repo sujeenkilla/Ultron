@@ -96,7 +96,7 @@ retry:
     CALL diskReset
     DEC di
     TEST di,di
-    JNZ retry
+    JNZ retry ; retrying
 
 failDiskRead:
     MOV si, read_failure

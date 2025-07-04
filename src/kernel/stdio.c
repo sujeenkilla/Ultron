@@ -14,5 +14,18 @@ void puts(const char* s){
 }
 
 void _cdecl printf(const char* s){
-	
+	while(*s){
+	    putc(*s);
+	}
+	*s++;
+}
+
+
+void _cdecl printf(const char* fmt){
+    while(*s){
+        switch(){
+
+        }
+    }
+
 }

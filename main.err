@@ -1,4 +1,6 @@
 src\kernel\stdint.h(18): Warning! W138: No newline at end of file
-src\kernel\stdint.h(18): Warning! W138: No newline at end of file
-src\kernel\stdio.h(19): Warning! W138: No newline at end of file
-src\kernel\main.c(10): Warning! W138: No newline at end of file
+src\kernel\stdio\..\stdint.h(18): Warning! W138: No newline at end of file
+src\kernel\stdio\stdio.h(19): Warning! W138: No newline at end of file
+src\kernel\disk\..\stdint.h(18): Warning! W138: No newline at end of file
+src\kernel\disk\asmDisk.h(4): Warning! W138: No newline at end of file
+src\kernel\main.c(12): Warning! W138: No newline at end of file

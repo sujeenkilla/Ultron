@@ -1,10 +1,12 @@
 #include "stdint.h"
-#include "stdio.h"
-
+#include "stdio/stdio.h"
+#include "disk/asmDisk.h"
 
 //_cdecl is use to integrate(entry point for out asm file)
 void _cdecl cstart_(){
-    //puts("hi");
-  printf("%s\r\n","BasketBall");
+  uint8_t error;
 
+  x86_Disk_Reset(10,&error);
+
+  printf("Error %d\r\n", error);
 }

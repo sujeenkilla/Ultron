@@ -1,6 +1,6 @@
 #include "stdio.h"
 #include "print.h"
-#include "stdint.h"
+#include "../stdint.h"
 
 void putc(char c){
     x86_Viedo_WriteCharTeletype(c, 0);
